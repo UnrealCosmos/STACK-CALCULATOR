@@ -1,22 +1,27 @@
-#include <standard.h>
+#include "standard.h"
 int main()
 {
+    uint8_t choice1,choice2,n;
 
-    printfln("Enter the number of arguments you want to enter:");
-    scanf("%d",&arg);
 
-    Printfln("Welcome!! Let's do Maths\n\n");
+    printf("Welcome!! Let's do Maths\n\n");
 
-    printfln("Enter the type of operation you want to perform:");
-    printfln("1. Basic operations (+,-,*,/)");
-    printfln("2. Percentage, average, mean");
-    printfln("3. Trigonometric operationns (sin,cos,tan)");
-    scanf("%d", &choice[1]);
+    printf("Enter the type of operation you want to perform:\n");
+    printf("1. Basic operations (+,-,*,/)\n");
+    printf("2. Average, sum and median\n");
+    printf("3. Trigonometric operationns (sin,cos,tan)\n");
+    scanf("%hhu", &choice1);
 
-    Switch(choice[1])
+    switch(choice1)
     {
         case 1:
-        operations();
+        printf("Enter your choice:\n");
+        printf("1.Integer\n");
+        printf("2.Float\n");
+        printf("3.Double\n");
+        scanf("%hhu", &choice2);
+
+        operations(choice2);
         break;
 
         case 2:
@@ -27,19 +32,7 @@ int main()
         trigonometry();
         break;
     }
-
-    printfln("Enter your choice:");
-    printfln("1.Integer");
-    printfln("2.Float");
-    printfln("3.Double");
-    scanf("%d", &choice[0]);
-
-    
-
-
-    
-
-        
+    return 0;
     }
 
     
